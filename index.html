@@ -13,6 +13,9 @@
 
 <body>
 
+<audio id="bg-music" autoplay loop>
+    <source src="forest-ambience.mp3" type="audio/mpeg">
+</audio>
 <!-- BACKSOUND -->
 <audio autoplay loop>
    <source src="forest-ambience.mp3">
@@ -70,5 +73,17 @@
 </footer>
 
 <script src="script.js"></script>
+   <script>
+    const music = document.getElementById("bg-music");
+
+    window.addEventListener("load", function () {
+        music.volume = 0.4; // atur volume (0.0 - 1.0)
+        music.play().catch(() => {
+            document.body.addEventListener("click", () => {
+                music.play();
+            }, { once: true });
+        });
+    });
+</script>
 </body>
 </html>
