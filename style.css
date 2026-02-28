@@ -76,13 +76,13 @@ nav a {
 }
 
 
-/* SERVICES - BACKGROUND HIJAU MUDA */
+/* SERVICES - BACKGROUND PUTIH */
 .services {
-    background-color: #e6f4ea;
+    background-color: #ffffff;
     padding: 80px 5%;
     text-align: center;
+    border-top: 1px solid #eee;
 }
-
 .services h2 {
     font-size: 32px;
     margin-bottom: 40px;
