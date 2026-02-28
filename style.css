@@ -46,16 +46,14 @@ nav a {
     border-radius: 20px;
 }
 
-/* HERO */
+/* HERO - TANPA OVERLAY HIJAU */
 .hero {
-    background: linear-gradient(rgba(0,128,0,0.6), rgba(0,128,0,0.6)), 
-                url('mangrove.jpg');
-    background-size: cover;        /* WAJIB */
-    background-position: center;   /* WAJIB */
+    background: url('mangrove.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    
-    min-height: 100vh;   /* agar full layar */
-    
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,21 +61,42 @@ nav a {
     color: white;
     padding: 20px;
 }
-/* SERVICES */
+
+/* HERO TEXT AESTHETIC */
+.hero-text h1 {
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+
+/* SERVICES - BACKGROUND HIJAU MUDA */
 .services {
-    padding: 70px 5%;
+    background-color: #e6f4ea;
+    padding: 80px 5%;
     text-align: center;
 }
 
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* GRID */
 .service-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 40px;
     justify-items: center;
 }
 
-/* CARD UMUM */
+/* CARD */
 .card {
     background: white;
     padding: 25px;
@@ -103,6 +122,11 @@ nav a {
     margin-top: 15px;
 }
 
+/* BARIS KEDUA DI TENGAH */
+.center-card {
+    grid-column: span 1;
+}
+
 /* ADMIN BUTTON */
 .admin-btn {
     display: inline-block;
@@ -119,6 +143,7 @@ nav a {
     background: #256b45;
 }
 
+
 /* BLOG */
 .blog {
     background-color: #e6f4ea;
@@ -126,20 +151,33 @@ nav a {
     text-align: center;
 }
 
-/* RESPONSIVE TABLET */
+
+/* FOOTER - COKLAT KAYU */
+footer {
+    background: #8b5a2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .service-box {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* RESPONSIVE HP */
 @media (max-width: 600px) {
     .service-box {
         grid-template-columns: 1fr;
     }
 
-    .card {
-        max-width: 100%;
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
     }
 }
