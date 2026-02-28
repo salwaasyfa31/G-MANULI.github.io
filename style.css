@@ -48,24 +48,21 @@ nav a {
 
 /* HERO */
 .hero {
+    background: linear-gradient(rgba(0,128,0,0.6), rgba(0,128,0,0.6)), 
+                url('beach.jpg');
+    background-size: cover;        /* WAJIB */
+    background-position: center;   /* WAJIB */
+    background-repeat: no-repeat;
+    
+    min-height: 100vh;   /* agar full layar */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(rgba(46,139,87,0.7), rgba(46,139,87,0.7)),
-    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-    background-size: cover;
-    background-position: center;
     color: white;
+    padding: 20px;
 }
-
-.hero h1 {
-    font-size: 36px;
-}
-
-.hero h2 {
-    font-weight: 300;
-    margin-top: 10px;
-}
-
 /* SERVICES */
 .services {
     padding: 60px 5%;
@@ -132,4 +129,8 @@ footer {
         width: 100%;
         max-width: 350px;
     }
+    .card audio {
+    width: 100%;
+    max-width: 250px;
+}
 }
