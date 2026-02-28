@@ -49,7 +49,7 @@ nav a {
 /* HERO */
 .hero {
     background: linear-gradient(rgba(0,128,0,0.6), rgba(0,128,0,0.6)), 
-                url('beach.jpg');
+                url('mangrove.jpg');
     background-size: cover;        /* WAJIB */
     background-position: center;   /* WAJIB */
     background-repeat: no-repeat;
@@ -100,6 +100,7 @@ nav a {
 
 /* BLOG */
 .blog {
+    background-color: #e6f4ea;   /* hijau muda */
     padding: 60px 5%;
     text-align: center;
 }
