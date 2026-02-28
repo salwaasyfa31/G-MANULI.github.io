@@ -70,19 +70,20 @@ nav a {
 }
 
 .service-box {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     margin-top: 30px;
 }
-
 .card {
     background: white;
     padding: 25px;
     border-radius: 12px;
-    width: 260px;
+    width: 100%;              /* ubah jadi full fleksibel */
+    max-width: 300px;         /* batas maksimal */
+    margin: auto;             /* biar rata tengah */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .card h3 {
@@ -90,8 +91,10 @@ nav a {
     color: #2e8b57;
 }
 
-audio {
+/* khusus audio di dalam card */
+.card audio {
     width: 100%;
+    max-width: 250px;
     margin-top: 15px;
 }
 
