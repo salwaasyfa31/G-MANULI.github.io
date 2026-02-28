@@ -61,9 +61,6 @@
             <source src="forest-ambience.mp3.mp3" type="audio/mpeg">
         </audio>
 
-        <button onclick="toggleMusic()" id="playBtn" class="audio-btn">
-            ▶ Play Audio
-        </button>
     </div>
 </div>
 </section>
@@ -80,20 +77,5 @@
     <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
 </footer>
 
-<script>
-    const music = document.getElementById("bg-music");
-    const btn = document.getElementById("playBtn");
-
-    function toggleMusic() {
-        if (music.paused) {
-            music.volume = 0.4;
-            music.play();
-            btn.innerHTML = "⏸ Pause Audio";
-        } else {
-            music.pause();
-            btn.innerHTML = "▶ Play Audio";
-        }
-    }
-</script>
 </body>
 </html>
