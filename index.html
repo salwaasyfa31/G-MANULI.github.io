@@ -75,11 +75,18 @@
 
 <script>
     const music = document.getElementById("bg-music");
+    const btn = document.getElementById("playBtn");
 
-    document.addEventListener("click", function () {
-        music.volume = 0.4; // atur volume (0.0 sampai 1.0)
-        music.play();
-    }, { once: true });
+    function toggleMusic() {
+        if (music.paused) {
+            music.volume = 0.4;
+            music.play();
+            btn.innerHTML = "⏸ Pause Audio";
+        } else {
+            music.pause();
+            btn.innerHTML = "▶ Play Audio";
+        }
+    }
 </script>
 </body>
 </html>
