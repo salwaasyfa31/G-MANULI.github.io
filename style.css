@@ -83,7 +83,8 @@ nav a:hover {
 .service-box {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .card {
