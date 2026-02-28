@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <audio id="bg-music" loop>
+    <source src="forest-ambience.mp3" type="audio/mpeg">
+</audio>
 
 <audio id="bg-music" autoplay loop>
     <source src="forest-ambience.mp3" type="audio/mpeg">
@@ -72,18 +75,13 @@
     <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
 </footer>
 
-<script src="script.js"></script>
-   <script>
+<script>
     const music = document.getElementById("bg-music");
 
-    window.addEventListener("load", function () {
-        music.volume = 0.4; // atur volume (0.0 - 1.0)
-        music.play().catch(() => {
-            document.body.addEventListener("click", () => {
-                music.play();
-            }, { once: true });
-        });
-    });
+    document.addEventListener("click", function () {
+        music.volume = 0.4; // atur volume (0.0 sampai 1.0)
+        music.play();
+    }, { once: true });
 </script>
 </body>
 </html>
