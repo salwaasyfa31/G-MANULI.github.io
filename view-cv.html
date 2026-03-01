@@ -1,112 +1,159 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>View CV - Salwa Asyfa Siregar</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f5f3ef;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View CV - Salwa Asyfa Siregar</title>
 
-        .container {
-            width: 80%;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
+<style>
 
-        /* FOTO DAN NAMA DI TENGAH */
-        .profile {
-            text-align: center;
-        }
+/* WARNA TEMA */
+:root {
+    --hijau-tua: #1f3d36;
+    --hijau-muda: #9dc5bb;
+    --biru-muda: #d6eaf2;
+    --coklat-kayu: #5c4033;
+    --putih: #ffffff;
+}
 
-        .profile img {
-            width: 250px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: var(--biru-muda);
+}
 
-        .profile h1 {
-            margin: 10px 0;
-            color: #5c4033;
-        }
+/* JUDUL CV */
+.header {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
 
-        /* ISI RATA KIRI KANAN */
-        .content {
-            text-align: justify;
-            margin-top: 30px;
-            line-height: 1.8;
-            font-size: 18px;
-        }
+.header h1 {
+    font-size: 48px;
+    color: var(--coklat-kayu);
+    margin: 0;
+}
 
-        h2 {
-            color: #5c4033;
-            margin-top: 30px;
-        }
+/* CONTAINER UTAMA */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background: var(--putih);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
 
-        ul {
-            margin-left: 20px;
-        }
+/* FOTO */
+.profile {
+    text-align: center;
+}
 
-        a {
-            color: #5c4033;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.profile img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 30px;
+    object-fit: cover;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.profile h2 {
+    margin-top: 20px;
+    color: var(--coklat-kayu);
+}
 
-        /* TOMBOL KEMBALI */
-        .btn-kembali {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 10px 20px;
-            background-color: #5c4033;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-        }
+/* KOTAK HIJAU TUA VIEW CV */
+.cv-box {
+    background: var(--hijau-tua);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-        .btn-kembali:hover {
-            background-color: #3e2a22;
-        }
+/* ISI KONTEN */
+.content {
+    text-align: justify;
+    line-height: 1.8;
+    color: #333;
+}
 
-    </style>
+.content h3 {
+    color: var(--coklat-kayu);
+    margin-top: 30px;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content a {
+    color: var(--hijau-tua);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* TOMBOL KEMBALI */
+.btn-kembali {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: var(--hijau-muda);
+    color: var(--hijau-tua);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-kembali:hover {
+    background: var(--hijau-tua);
+    color: white;
+}
+
+</style>
 </head>
 <body>
 
+<div class="header">
+    <h1>Curriculum Vitae</h1>
+</div>
+
 <div class="container">
 
-    <!-- FOTO & NAMA -->
     <div class="profile">
         <img src="salwa.jpg" alt="Foto Salwa">
-        <h1>Salwa Asyfa Siregar</h1>
-        <p><strong>Pengelolaan Perpustakaan</strong></p>
+        <h2>Salwa Asyfa Siregar</h2>
     </div>
 
-    <!-- ISI CV -->
+    <div class="cv-box">
+        VIEW CV
+    </div>
+
     <div class="content">
 
-        <h2>Pendidikan</h2>
+        <h3>Pengelolaan Perpustakaan</h3>
+
+        <h3>Pendidikan</h3>
         <p>
             Universitas Sumatera Utara<br>
             S1 - Perpustakaan dan Sains Informasi
         </p>
 
-        <h2>Pengalaman</h2>
+        <h3>Pengalaman</h3>
         <ul>
             <li>Mengembangkan Platform Perpustakaan Digital di Perpustakaan Sekolah</li>
             <li>Mengelola Bahan Pustaka pada Perpustakaan BRMP SUMUT</li>
         </ul>
 
-        <h2>Kontak</h2>
+        <h3>Kontak</h3>
         <p>
             Instagram :
             <a href="https://www.instagram.com/sasalwasrg__" target="_blank">
@@ -119,8 +166,7 @@
             </a>
         </p>
 
-        <!-- TOMBOL KEMBALI -->
-        <a href="index.html" class="btn-kembali">Kembali</a>
+        <a href="index.html" class="btn-kembali">← Kembali ke Home</a>
 
     </div>
 
