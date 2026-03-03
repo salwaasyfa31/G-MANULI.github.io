@@ -181,3 +181,22 @@ footer {
         font-size: 18px;
     }
 }
+/* VIDEO SECTION */
+.video-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.video-container iframe {
+    width: 750px;
+    height: 420px;
+    max-width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
