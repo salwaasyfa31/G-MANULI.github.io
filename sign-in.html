@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - Pendaftaran Anggota</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d8efe3, #e6f4f9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      width: 420px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      border-top: 8px solid #1f5f4a; /* Hijau tua */
+    }
+
+    h2 {
+      text-align: center;
+      color: #1f5f4a;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #6b4f3b; /* Coklat kayu */
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #a8d5ba; /* Hijau muda */
+      outline: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #0d6e8a; /* Biru muda */
+      box-shadow: 0 0 5px rgba(13, 110, 138, 0.3);
+    }
+
+    .btn-daftar {
+      width: 100%;
+      padding: 12px;
+      background-color: #1f5f4a; /* Hijau tua */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-daftar:hover {
+      background-color: #6b4f3b; /* Coklat kayu */
+    }
+
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #0d6e8a;
+      font-weight: 600;
+    }
+
+    .back-home:hover {
+      text-decoration: underline;
+      color: #1f5f4a;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+
+    <h2>Pendaftaran Anggota</h2>
+
+    <form>
+      <label>First Name</label>
+      <input type="text" placeholder="Masukkan nama depan" required>
+
+      <label>Last Name</label>
+      <input type="text" placeholder="Masukkan nama belakang" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Masukkan email" required>
+
+      <label>No. Handphone</label>
+      <input type="tel" placeholder="Masukkan nomor handphone" required>
+
+      <button type="submit" class="btn-daftar">Daftar</button>
+    </form>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+
+  </div>
+
+</body>
+</html>
