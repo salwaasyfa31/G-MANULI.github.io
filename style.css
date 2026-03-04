@@ -200,3 +200,16 @@ footer {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+.signin-btn {
+  padding: 10px 18px;
+  background-color: #1f5f4a; /* hijau tua */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #6b4f3b; /* coklat kayu */
+}
