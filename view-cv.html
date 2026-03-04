@@ -1,97 +1,117 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Salwa Asyfa</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f8f7;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum Vitae - Salwa Asyfa</title>
 
-        .cv-container {
-            max-width: 800px;
-            margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        .cv-header {
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e9dfd3;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
 
-        .cv-header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 4px solid #2e8b57;
-        }
+.cv-wrapper {
+    background: #f4f1ec;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
 
-        h2 {
-            color: #2e8b57;
-            border-bottom: 2px solid #2e8b57;
-            padding-bottom: 5px;
-        }
+.cv-wrapper h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: #5c3d2e;
+}
 
-        .contact a {
-            display: block;
-            margin-top: 5px;
-            text-decoration: none;
-            color: #2e8b57;
-            font-weight: bold;
-        }
+.profile-img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 250px;
+    border-radius: 20px;
+}
 
-        .back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 15px;
-            background-color: #2e8b57;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+.name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #5c3d2e;
+    margin-bottom: 30px;
+}
 
-        .back-btn:hover {
-            background-color: #246b45;
-        }
-    </style>
+.section-title {
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #5c3d2e;
+}
+
+.cv-wrapper p {
+    margin: 5px 0;
+}
+
+.cv-wrapper ol {
+    margin-left: 20px;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #5c3d2e;
+    font-weight: 500;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
+</style>
+
 </head>
+
 <body>
 
-<div class="cv-container">
+<div class="cv-wrapper">
 
-    <div class="cv-header">
-        <!-- GANTI FOTO.jpg dengan nama file foto kamu -->
-        <img src="foto.jpg" alt="Foto Salwa">
-        <h1>Salwa Asyfa</h1>
-        <p>Pengelolaan Perpustakaan</p>
-    </div>
+    <h1>Curriculum Vitae</h1>
 
-    <h2>Pendidikan</h2>
-    <p><strong>Universitas Sumatera Utara</strong></p>
+    <!-- GANTI salwa.jpg sesuai nama file foto kamu -->
+    <img src="salwa.jpg" alt="Salwa Asyfa" class="profile-img">
+
+    <div class="name">Salwa Asyfa</div>
+
+    <div class="section-title">Pengelolaan Perpustakaan</div>
+
+    <div class="section-title">Pendidikan</div>
+    <p>Universitas Sumatera Utara</p>
     <p>S1 - Perpustakaan dan Sains Informasi</p>
 
-    <h2>Pengalaman</h2>
+    <div class="section-title">Pengalaman</div>
     <ol>
         <li>Mengembangkan platform perpustakaan digital sekolah</li>
         <li>Mengelola bahan pustaka perpustakaan BRMP SUMUT</li>
     </ol>
 
-    <h2>Kontak</h2>
+    <div class="section-title">Kontak</div>
     <div class="contact">
-        <a href="https://www.instagram.com/sasalwasrg__/" target="_blank">Instagram</a>
-        <a href="mailto:salwacippa123@gmail.com">Email</a>
+        <p>Instagram: @sasalwasrg__</p>
+        <p>Email: salwacippa123@gmail.com</p>
     </div>
 
-    <a href="index.html" class="back-btn">Kembali ke Beranda</a>
+    <a href="index.html" class="back-home">← Back to Home</a>
 
 </div>
 
