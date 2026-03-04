@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us - Green Mangrove Nusantara Library</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e6f4ea, #d9f0f7);
+}
+
+/* CONTAINER */
+.contact-container {
+    max-width: 800px;
+    margin: 100px auto;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* TITLE */
+.contact-container h1 {
+    color: #1f5f4a; /* hijau tua */
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+.contact-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #0d6e8a; /* biru muda */
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    color: #6b4f3b; /* coklat kayu */
+}
+
+/* FEEDBACK BUTTON */
+.feedback-btn {
+    margin-top: 35px;
+    padding: 12px 25px;
+    background: #1f5f4a; /* hijau tua */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.feedback-btn:hover {
+    background: #6b4f3b;
+}
+
+/* FEEDBACK FORM */
+.feedback-form {
+    margin-top: 25px;
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #a8d5ba; /* hijau muda */
+    resize: none;
+    font-family: inherit;
+}
+
+.feedback-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #0d6e8a; /* biru muda */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback-form button:hover {
+    background: #1f5f4a;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* BACK BUTTON */
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #1f5f4a;
+    font-weight: 600;
+}
+
+.back-home:hover {
+    color: #0d6e8a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-container">
+
+    <h1>Hubungi Kami</h1>
+
+    <p>
+        Kami dengan senang hati menerima pertanyaan, saran, maupun kerja sama. 
+        Jangan ragu untuk menghubungi kami dan menjadi bagian dari perjalanan 
+        digital library ini.
+    </p>
+
+    <div class="contact-info">
+        📞 <a href="https://wa.me/6288740509067" target="_blank">088740509067</a><br><br>
+        📧 <a href="mailto:salwacippa123@gmail.com">salwacippa123@gmail.com</a>
+    </div>
+
+    <button class="feedback-btn" onclick="toggleFeedback()">
+        Berikan Feedback
+    </button>
+
+    <div class="feedback-form" id="feedbackForm">
+        <textarea placeholder="Tulis feedback Anda di sini..."></textarea>
+        <button>Kirim Feedback</button>
+    </div>
+
+    <a href="../index.html" class="back-home">← Back to Home</a>
+
+</div>
+
+<script>
+function toggleFeedback() {
+    var form = document.getElementById("feedbackForm");
+    if (form.style.display === "block") {
+        form.style.display = "none";
+    } else {
+        form.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
