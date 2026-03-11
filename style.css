@@ -382,3 +382,11 @@ text-align: justify;
 .about-card li{
 text-align: justify;
 }
+.about-card{
+background:white;
+margin-bottom:30px;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+border-left:6px solid #52b788;
+}
