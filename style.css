@@ -390,3 +390,13 @@ border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 border-left:6px solid #52b788;
 }
+/* Menghilangkan titik hitam pada menu */
+nav ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+nav ul li{
+list-style: none;
+}
