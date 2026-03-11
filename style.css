@@ -294,3 +294,8 @@ max-width:100%;
 height:auto;
 display:block;
 }
+.container{
+width:1200px;
+max-width:95%;
+margin:auto;
+}
