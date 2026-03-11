@@ -400,3 +400,8 @@ padding: 0;
 nav ul li{
 list-style: none;
 }
+nav ul, nav ul li{
+list-style: none;
+margin: 0;
+padding: 0;
+}
