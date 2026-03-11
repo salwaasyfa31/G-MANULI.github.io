@@ -229,3 +229,63 @@ footer {
 .signin-btn:hover {
   background-color: #6b4f3b; /* coklat kayu */
 }
+/* Responsive untuk Tablet */
+@media screen and (max-width: 1024px) {
+
+.container{
+width:90%;
+margin:auto;
+}
+
+}
+
+/* Responsive untuk HP */
+@media screen and (max-width: 768px) {
+
+nav{
+flex-direction:column;
+align-items:center;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+padding:0;
+}
+
+nav ul li{
+margin:10px 0;
+}
+
+.hero{
+padding:20px;
+text-align:center;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+}
+
+/* Responsive untuk HP kecil */
+@media screen and (max-width: 480px) {
+
+h1{
+font-size:24px;
+}
+
+h2{
+font-size:20px;
+}
+
+p{
+font-size:14px;
+}
+
+button{
+width:100%;
+}
+
+}
