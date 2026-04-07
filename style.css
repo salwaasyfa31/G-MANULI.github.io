@@ -763,3 +763,14 @@ list-style: none;
     font-size: 1.2rem;
   }
 }
+#gmab-documentation .gmab-doc-heading h2,
+#gmab-documentation .gmab-doc-title {
+  font-family: 'Playfair Display', serif;
+}
+
+#gmab-documentation .gmab-doc-subtitle,
+#gmab-documentation .gmab-doc-text,
+#gmab-documentation .gmab-doc-badge,
+#gmab-documentation .gmab-doc-eyebrow {
+  font-family: 'Poppins', sans-serif;
+}
