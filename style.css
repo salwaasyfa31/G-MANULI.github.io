@@ -541,3 +541,76 @@ list-style: none;
     height: 360px !important;
   }
 }
+/* =========================
+   GMNL HOME STATS - Scoped
+   ========================= */
+#gmnl-home-stats {
+  --gmnl-dark-green: #1f4d3a;
+  --gmnl-light-green: #7fbf7f;
+  --gmnl-light-blue: #b9e3f9;
+  --gmnl-white: #ffffff;
+  --gmnl-earth-brown: #8b5e3c;
+  --gmnl-soft-bg: #f4fbf6;
+  --gmnl-text-dark: #183126;
+  --gmnl-border-soft: rgba(31, 77, 58, 0.14);
+
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #eef8f1 0%, #f9fcff 100%);
+}
+
+#gmnl-home-stats .gmnl-stats-wrap {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+#gmnl-home-stats .gmnl-stats-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+#gmnl-home-stats .gmnl-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #7fbf7f;
+  color: #1f4d3a;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+#gmnl-home-stats h2 {
+  margin: 0 0 12px;
+  color: #1f4d3a;
+}
+
+#gmnl-home-stats .gmnl-stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 30px 0;
+}
+
+#gmnl-home-stats .gmnl-stat-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(31, 77, 58, 0.1);
+}
+
+#gmnl-home-stats .gmnl-stat-value {
+  color: #1f4d3a;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+#gmnl-home-stats .gmnl-chart-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#gmnl-home-stats canvas {
+  width: 100% !important;
+  height: 400px !important;
+}
