@@ -614,3 +614,152 @@ list-style: none;
   width: 100% !important;
   height: 400px !important;
 }
+/* =========================================
+   GMAB ABOUT US DOCUMENTATION - NO CONFLICT
+   ========================================= */
+#gmab-documentation {
+  --gmab-dark-green: #1f4d3a;
+  --gmab-light-green: #8ccf8a;
+  --gmab-light-blue: #cfefff;
+  --gmab-white: #ffffff;
+  --gmab-earth-brown: #8b5e3c;
+  --gmab-text-dark: #21352d;
+  --gmab-soft-bg: linear-gradient(135deg, #eef9f0 0%, #e6f5ff 100%);
+  --gmab-border: rgba(31, 77, 58, 0.12);
+
+  padding: 80px 20px;
+  background: var(--gmab-soft-bg);
+}
+
+#gmab-documentation .gmab-doc-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+#gmab-documentation .gmab-doc-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#gmab-documentation .gmab-doc-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--gmab-light-green);
+  color: var(--gmab-dark-green);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#gmab-documentation .gmab-doc-heading h2 {
+  margin: 0 0 12px;
+  color: var(--gmab-dark-green);
+  font-size: 2.3rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+#gmab-documentation .gmab-doc-subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--gmab-text-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#gmab-documentation .gmab-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+#gmab-documentation .gmab-doc-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--gmab-border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(31, 77, 58, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gmab-documentation .gmab-doc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(31, 77, 58, 0.16);
+}
+
+#gmab-documentation .gmab-doc-image-box {
+  position: relative;
+  overflow: hidden;
+  background: #f5fbf6;
+}
+
+#gmab-documentation .gmab-doc-image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+#gmab-documentation .gmab-doc-card:hover .gmab-doc-image {
+  transform: scale(1.04);
+}
+
+#gmab-documentation .gmab-doc-content {
+  padding: 24px 24px 28px;
+}
+
+#gmab-documentation .gmab-doc-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--gmab-light-blue);
+  color: var(--gmab-dark-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+#gmab-documentation .gmab-doc-title {
+  margin: 0 0 12px;
+  color: var(--gmab-earth-brown);
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+#gmab-documentation .gmab-doc-text {
+  margin: 0;
+  color: var(--gmab-text-dark);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  #gmab-documentation {
+    padding: 65px 16px;
+  }
+
+  #gmab-documentation .gmab-doc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #gmab-documentation .gmab-doc-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  #gmab-documentation .gmab-doc-image {
+    height: 260px;
+  }
+
+  #gmab-documentation .gmab-doc-content {
+    padding: 20px;
+  }
+
+  #gmab-documentation .gmab-doc-title {
+    font-size: 1.2rem;
+  }
+}
