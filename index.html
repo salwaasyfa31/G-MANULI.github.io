@@ -139,6 +139,52 @@
 <footer>
     <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<script>
+const ctx = document.getElementById('gmnlMangroveChart');
+
+if (ctx) {
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2021', '2022', '2023', '2024'],
+      datasets: [{
+        label: 'Rehabilitasi Mangrove (ha)',
+        data: [34911, 38549, 41000, 84396],
+        backgroundColor: [
+          '#1f4d3a',
+          '#7fbf7f',
+          '#b9e3f9',
+          '#8b5e3c'
+        ],
+        borderRadius: 10
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#1f4d3a'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#1f4d3a'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#1f4d3a'
+          }
+        }
+      }
+    }
+  });
+}
+</script>
 </body>
 </html>
