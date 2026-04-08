@@ -147,6 +147,30 @@
 <footer>
     <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
 </footer>
+    <!-- SCRIPT DROPDOWN -->
+<script>
+  (function () {
+    const gdrpDropdown = document.getElementById('gdrpCollection');
+    const gdrpToggleBtn = document.getElementById('gdrpToggleBtn');
+
+    if (!gdrpDropdown || !gdrpToggleBtn) return;
+
+    gdrpToggleBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      gdrpDropdown.classList.toggle('gdrp-open');
+
+      const isOpen = gdrpDropdown.classList.contains('gdrp-open');
+      gdrpToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!gdrpDropdown.contains(e.target)) {
+        gdrpDropdown.classList.remove('gdrp-open');
+        gdrpToggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
