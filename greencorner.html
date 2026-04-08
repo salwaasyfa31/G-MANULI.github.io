@@ -1,267 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Corner | Green Mangrove Nusantara Library</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- FONT -->
-
-<head>
-  ...
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<script>
-const gmquizData = [
-  {
-    question: "Apa fungsi utama mangrove?",
-    options: ["Menahan abrasi", "Tempat parkir", "Lapangan bola"],
-    answer: 0
-  },
-  {
-    question: "Mangrove hidup di?",
-    options: ["Gunung", "Pantai", "Padang rumput"],
-    answer: 1
-  },
-  {
-    question: "Akar mangrove berfungsi?",
-    options: ["Menopang dan menyerap", "Hiasan", "Mainan"],
-    answer: 0
-  }
-];
-
-let gmquizIndex = 0;
-let gmquizScore = 0;
-let gmquizAnswered = false;
-
-function gmquizLoad() {
-  gmquizAnswered = false;
-  const q = gmquizData[gmquizIndex];
-
-  document.getElementById("gmquiz-question").innerText = q.question;
-
-  const options = document.getElementById("gmquiz-options");
-  options.innerHTML = "";
-
-  q.options.forEach((opt, i) => {
-    const btn = document.createElement("button");
-    btn.innerText = opt;
-
-    btn.onclick = () => {
-      if (gmquizAnswered) return;
-      gmquizAnswered = true;
-
-      if (i === q.answer) {
-        btn.classList.add("gmquiz-correct");
-        gmquizScore++;
-      } else {
-        btn.classList.add("gmquiz-wrong");
-      }
-    };
-
-    options.appendChild(btn);
-  });
-
-  updateProgress();
-}
-
-function updateProgress() {
-  const percent = ((gmquizIndex) / gmquizData.length) * 100;
-  document.getElementById("gmquiz-progress-bar").style.width = percent + "%";
-}
-
-document.getElementById("gmquiz-next").onclick = () => {
-  gmquizIndex++;
-
-  if (gmquizIndex < gmquizData.length) {
-    gmquizLoad();
-  } else {
-    document.getElementById("gmquiz-box").style.display = "none";
-    document.getElementById("gmquiz-result").style.display = "block";
-    document.getElementById("gmquiz-score").innerText =
-      "Skor kamu: " + gmquizScore + " / " + gmquizData.length;
-  }
-};
-
-function gmquizRestart() {
-  gmquizIndex = 0;
-  gmquizScore = 0;
-  document.getElementById("gmquiz-box").style.display = "block";
-  document.getElementById("gmquiz-result").style.display = "none";
-  gmquizLoad();
-}
-
-gmquizLoad();
-</script>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">🌿 Green Mangrove Nusantara Library</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="greencorner.html">Green Corner</a>
-    <a href="pages/collection.html">Collection</a>
-    <a href="pages/contact.html">Contact Us</a>
-    <a href="sign-in.html" class="signin-btn">Sign In</a>
-  </nav>
-</header>
-<!-- BACK BUTTON -->
-<div class="gsys-back-wrap">
-  <a href="javascript:history.back()" class="gsys-back-btn">← Back</a>
-</div>
-<!-- HERO -->
-<section class="gmge-page-hero">
-  <div class="gmge-page-hero-inner">
-    <p class="gmge-page-hero-tag">Green Corner</p>
-    <h1 class="gmge-page-hero-title">Our Event</h1>
-    <p class="gmge-page-hero-text">
-      Berbagai kegiatan yang telah dilakukan sebagai bagian dari penguatan literasi,
-      pengembangan perpustakaan, dan kolaborasi pendidikan.
-    </p>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🌿 Green Mangrove Nusantara Library</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="greencorner.html">Green Corner</a>
+      <a href="pages/collection.html">Collection</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="sign-in.html" class="signin-btn">Sign In</a>
+    </nav>
+  </header>
+
+  <!-- BACK BUTTON -->
+  <div class="gsys-back-wrap">
+    <a href="javascript:history.back()" class="gsys-back-btn">← Back</a>
   </div>
-</section>
 
-<!-- EVENT -->
-<section id="gmge-event-section" class="gmge-event-section">
-  <div class="gmge-event-wrap">
-
-    <div class="gmge-event-heading">
-      <p class="gmge-event-eyebrow">Event Gallery</p>
-      <h2>Kegiatan Green Corner</h2>
-      <p class="gmge-event-subtitle">
-        Dokumentasi event yang telah dilakukan.
+  <!-- HERO -->
+  <section class="gmge-page-hero">
+    <div class="gmge-page-hero-inner">
+      <p class="gmge-page-hero-tag">Green Corner</p>
+      <h1 class="gmge-page-hero-title">Our Event</h1>
+      <p class="gmge-page-hero-text">
+        Berbagai kegiatan yang telah dilakukan sebagai bagian dari penguatan literasi,
+        pengembangan perpustakaan, dan kolaborasi pendidikan.
       </p>
     </div>
+  </section>
 
-    <div class="gmge-event-grid">
+  <!-- EVENT -->
+  <section id="gmge-event-section" class="gmge-event-section">
+    <div class="gmge-event-wrap">
 
-      <!-- EVENT 1 -->
-      <div class="gmge-event-card">
-        <div class="gmge-event-image-box">
-          <img src="dokumentasi 1.jpeg" class="gmge-event-image">
-        </div>
-        <div class="gmge-event-content">
-          <span class="gmge-event-badge">Event 01</span>
-          <h3 class="gmge-event-card-title">
-            Kunjungan Kerjasama dengan Perpustakaan Kuala Lumpur
-          </h3>
-        </div>
+      <div class="gmge-event-heading">
+        <p class="gmge-event-eyebrow">Event Gallery</p>
+        <h2>Kegiatan Green Corner</h2>
+        <p class="gmge-event-subtitle">
+          Dokumentasi event yang telah dilakukan.
+        </p>
       </div>
 
-      <!-- EVENT 2 -->
-      <div class="gmge-event-card">
-        <div class="gmge-event-image-box">
-          <img src="dokumentasi 2.jpeg" class="gmge-event-image">
+      <div class="gmge-event-grid">
+
+        <div class="gmge-event-card">
+          <div class="gmge-event-image-box">
+            <img src="dokumentasi%201.jpeg" alt="Kunjungan Kerjasama dengan Perpustakaan Kuala Lumpur" class="gmge-event-image">
+          </div>
+          <div class="gmge-event-content">
+            <span class="gmge-event-badge">Event 01</span>
+            <h3 class="gmge-event-card-title">
+              Kunjungan Kerjasama dengan Perpustakaan Kuala Lumpur
+            </h3>
+          </div>
         </div>
-        <div class="gmge-event-content">
-          <span class="gmge-event-badge">Event 02</span>
-          <h3 class="gmge-event-card-title">
-            Digitalisasi Perpustakaan Sekolah
-          </h3>
+
+        <div class="gmge-event-card">
+          <div class="gmge-event-image-box">
+            <img src="dokumentasi%202.jpeg" alt="Digitalisasi Perpustakaan Sekolah" class="gmge-event-image">
+          </div>
+          <div class="gmge-event-content">
+            <span class="gmge-event-badge">Event 02</span>
+            <h3 class="gmge-event-card-title">
+              Digitalisasi Perpustakaan Sekolah
+            </h3>
+          </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GMQUIZ MODERN START -->
+  <section id="gmquiz-section" class="gmquiz-section">
+    <div class="gmquiz-container">
+
+      <h2 class="gmquiz-title">🌿 Mangrove Quiz Game</h2>
+
+      <div class="gmquiz-progress">
+        <div id="gmquiz-progress-bar"></div>
+      </div>
+
+      <div id="gmquiz-box" class="gmquiz-box">
+        <h3 id="gmquiz-question" class="gmquiz-question"></h3>
+        <div id="gmquiz-options" class="gmquiz-options"></div>
+        <button id="gmquiz-next" class="gmquiz-next" type="button">Next</button>
+      </div>
+
+      <div id="gmquiz-result" class="gmquiz-result" style="display:none;">
+        <h2>🎉 Hasil Quiz</h2>
+        <p id="gmquiz-score"></p>
+        <button onclick="gmquizRestart()" class="gmquiz-restart" type="button">Main Lagi</button>
       </div>
 
     </div>
-<script>
-const gmquizData = [
-  {
-    question: "Apa fungsi utama mangrove?",
-    options: ["Menahan abrasi", "Tempat parkir", "Lapangan sepak bola"],
-    answer: 0
-  },
-  {
-    question: "Mangrove hidup di daerah?",
-    options: ["Pegunungan", "Pesisir pantai", "Padang rumput"],
-    answer: 1
-  },
-  {
-    question: "Akar mangrove berfungsi untuk?",
-    options: ["Menyerap air laut dan menopang", "Hiasan saja", "Tempat duduk"],
-    answer: 0
-  }
-];
+  </section>
+  <!-- GMQUIZ MODERN END -->
 
-let gmquizIndex = 0;
-let gmquizScore = 0;
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
+  </footer>
 
-function gmquizLoad() {
-  const q = gmquizData[gmquizIndex];
-  document.getElementById("gmquiz-question").innerText = q.question;
+  <!-- SCRIPT QUIZ -->
+  <script>
+    const gmquizData = [
+      {
+        question: "Apa fungsi utama mangrove?",
+        options: ["Menahan abrasi", "Tempat parkir", "Lapangan bola"],
+        answer: 0
+      },
+      {
+        question: "Mangrove hidup di?",
+        options: ["Gunung", "Pantai", "Padang rumput"],
+        answer: 1
+      },
+      {
+        question: "Akar mangrove berfungsi?",
+        options: ["Menopang dan menyerap", "Hiasan", "Mainan"],
+        answer: 0
+      }
+    ];
 
-  const options = document.getElementById("gmquiz-options");
-  options.innerHTML = "";
+    let gmquizIndex = 0;
+    let gmquizScore = 0;
+    let gmquizAnswered = false;
 
-  q.options.forEach((opt, i) => {
-    const btn = document.createElement("button");
-    btn.innerText = opt;
-    btn.onclick = () => gmquizCheck(i);
-    options.appendChild(btn);
-  });
-}
+    function gmquizLoad() {
+      gmquizAnswered = false;
+      const q = gmquizData[gmquizIndex];
 
-function gmquizCheck(i) {
-  if (i === gmquizData[gmquizIndex].answer) {
-    gmquizScore++;
-  }
-}
+      document.getElementById("gmquiz-question").innerText = q.question;
 
-document.getElementById("gmquiz-next").onclick = () => {
-  gmquizIndex++;
-  if (gmquizIndex < gmquizData.length) {
-    gmquizLoad();
-  } else {
-    document.getElementById("gmquiz-box").style.display = "none";
-    document.getElementById("gmquiz-result").style.display = "block";
-    document.getElementById("gmquiz-score").innerText =
-      "Skor kamu: " + gmquizScore + " / " + gmquizData.length;
-  }
-};
+      const options = document.getElementById("gmquiz-options");
+      options.innerHTML = "";
 
-function gmquizRestart() {
-  gmquizIndex = 0;
-  gmquizScore = 0;
-  document.getElementById("gmquiz-box").style.display = "block";
-  document.getElementById("gmquiz-result").style.display = "none";
-  gmquizLoad();
-}
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.innerText = opt;
 
-gmquizLoad();
-</script>
-  </div>
-</section>
+        btn.onclick = () => {
+          if (gmquizAnswered) return;
+          gmquizAnswered = true;
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
-</footer>
-<!-- SCRIPT DROPDOWN -->
-<script>
-  (function () {
-    const gdrpDropdown = document.getElementById('gdrpCollection');
-    const gdrpToggleBtn = document.getElementById('gdrpToggleBtn');
+          const allButtons = options.querySelectorAll("button");
 
-    if (!gdrpDropdown || !gdrpToggleBtn) return;
+          allButtons.forEach((button, index) => {
+            if (index === q.answer) {
+              button.classList.add("gmquiz-correct");
+            }
+          });
 
-    gdrpToggleBtn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      gdrpDropdown.classList.toggle('gdrp-open');
+          if (i === q.answer) {
+            gmquizScore++;
+          } else {
+            btn.classList.add("gmquiz-wrong");
+          }
+        };
 
-      const isOpen = gdrpDropdown.classList.contains('gdrp-open');
-      gdrpToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+        options.appendChild(btn);
+      });
 
-    document.addEventListener('click', function (e) {
-      if (!gdrpDropdown.contains(e.target)) {
-        gdrpDropdown.classList.remove('gdrp-open');
-        gdrpToggleBtn.setAttribute('aria-expanded', 'false');
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const percent = (gmquizIndex / gmquizData.length) * 100;
+      document.getElementById("gmquiz-progress-bar").style.width = percent + "%";
+    }
+
+    document.getElementById("gmquiz-next").addEventListener("click", function () {
+      gmquizIndex++;
+
+      if (gmquizIndex < gmquizData.length) {
+        gmquizLoad();
+      } else {
+        document.getElementById("gmquiz-box").style.display = "none";
+        document.getElementById("gmquiz-result").style.display = "block";
+        document.getElementById("gmquiz-score").innerText =
+          "Skor kamu: " + gmquizScore + " / " + gmquizData.length;
+        document.getElementById("gmquiz-progress-bar").style.width = "100%";
       }
     });
-  })();
-</script>
+
+    function gmquizRestart() {
+      gmquizIndex = 0;
+      gmquizScore = 0;
+      document.getElementById("gmquiz-box").style.display = "block";
+      document.getElementById("gmquiz-result").style.display = "none";
+      gmquizLoad();
+    }
+
+    gmquizLoad();
+  </script>
+
 </body>
 </html>
