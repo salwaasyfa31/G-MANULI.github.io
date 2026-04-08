@@ -1257,3 +1257,78 @@ footer {
   transform: translateY(0);
   pointer-events: auto;
 }
+/* ============================
+   GDRP DROPDOWN COLLECTION MENU
+   CLICK ONLY
+   ============================ */
+
+.gdrp-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.gdrp-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #1f4d3a;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: inherit;
+  font-family: inherit;
+  transition: 0.25s ease;
+}
+
+.gdrp-toggle:hover {
+  background: #eef8f1;
+}
+
+.gdrp-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.gdrp-menu a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #1f4d3a;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.gdrp-menu a:hover {
+  background: #eef8f1;
+}
+
+.gdrp-dropdown.gdrp-open .gdrp-menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .gdrp-dropdown {
+    width: 100%;
+  }
+
+  .gdrp-toggle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gdrp-menu {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: none;
+    border: 1px solid rgba(31, 77, 58, 0.12);
+  }
+}
