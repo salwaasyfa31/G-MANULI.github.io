@@ -1245,3 +1245,15 @@ footer {
     display: block;
   }
 }
+.gdrp-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.gdrp-dropdown:hover .gdrp-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
