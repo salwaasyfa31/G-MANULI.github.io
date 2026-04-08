@@ -1186,3 +1186,62 @@ footer {
     padding: 18px !important;
   }
 }
+/* ============================
+   GDRP DROPDOWN COLLECTION MENU
+   ============================ */
+
+.gdrp-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.gdrp-toggle {
+  cursor: pointer;
+}
+
+/* dropdown box */
+.gdrp-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 160px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* item dropdown */
+.gdrp-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #1f4d3a;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+/* hover item */
+.gdrp-menu a:hover {
+  background: #eef8f1;
+}
+
+/* show dropdown */
+.gdrp-dropdown:hover .gdrp-menu {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gdrp-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .gdrp-dropdown:hover .gdrp-menu {
+    display: block;
+  }
+}
