@@ -150,32 +150,71 @@ gmquizLoad();
       </div>
 
     </div>
-<!-- GMQUIZ SECTION START -->
-<section id="gmquiz-section" class="gmquiz-section">
-  <div class="gmquiz-container">
+<script>
+const gmquizData = [
+  {
+    question: "Apa fungsi utama mangrove?",
+    options: ["Menahan abrasi", "Tempat parkir", "Lapangan sepak bola"],
+    answer: 0
+  },
+  {
+    question: "Mangrove hidup di daerah?",
+    options: ["Pegunungan", "Pesisir pantai", "Padang rumput"],
+    answer: 1
+  },
+  {
+    question: "Akar mangrove berfungsi untuk?",
+    options: ["Menyerap air laut dan menopang", "Hiasan saja", "Tempat duduk"],
+    answer: 0
+  }
+];
 
-    <h2 class="gmquiz-title">Quiz Mangrove 🌿</h2>
-    <p class="gmquiz-subtitle">Uji pengetahuan kamu tentang mangrove!</p>
+let gmquizIndex = 0;
+let gmquizScore = 0;
 
-    <div id="gmquiz-box" class="gmquiz-box">
+function gmquizLoad() {
+  const q = gmquizData[gmquizIndex];
+  document.getElementById("gmquiz-question").innerText = q.question;
 
-      <div class="gmquiz-question" id="gmquiz-question"></div>
+  const options = document.getElementById("gmquiz-options");
+  options.innerHTML = "";
 
-      <div class="gmquiz-options" id="gmquiz-options"></div>
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = () => gmquizCheck(i);
+    options.appendChild(btn);
+  });
+}
 
-      <button class="gmquiz-next-btn" id="gmquiz-next">Next</button>
+function gmquizCheck(i) {
+  if (i === gmquizData[gmquizIndex].answer) {
+    gmquizScore++;
+  }
+}
 
-    </div>
+document.getElementById("gmquiz-next").onclick = () => {
+  gmquizIndex++;
+  if (gmquizIndex < gmquizData.length) {
+    gmquizLoad();
+  } else {
+    document.getElementById("gmquiz-box").style.display = "none";
+    document.getElementById("gmquiz-result").style.display = "block";
+    document.getElementById("gmquiz-score").innerText =
+      "Skor kamu: " + gmquizScore + " / " + gmquizData.length;
+  }
+};
 
-    <div id="gmquiz-result" class="gmquiz-result" style="display:none;">
-      <h3>Hasil Quiz</h3>
-      <p id="gmquiz-score"></p>
-      <button onclick="gmquizRestart()" class="gmquiz-restart">Ulangi Quiz</button>
-    </div>
+function gmquizRestart() {
+  gmquizIndex = 0;
+  gmquizScore = 0;
+  document.getElementById("gmquiz-box").style.display = "block";
+  document.getElementById("gmquiz-result").style.display = "none";
+  gmquizLoad();
+}
 
-  </div>
-</section>
-<!-- GMQUIZ SECTION END -->
+gmquizLoad();
+</script>
   </div>
 </section>
 
