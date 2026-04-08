@@ -6,66 +6,101 @@
   <title>Contact Us | Green Mangrove Nusantara Library</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">🌿 Green Mangrove Nusantara Library</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="greencorner.html">Green Corner</a>
-    <a href="pages/collection.html">Collection</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="sign-in.html" class="signin-btn">Sign In</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🌿 Green Mangrove Nusantara Library</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="greencorner.html">Green Corner</a>
+      <a href="pages/collection.html">Collection</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="sign-in.html" class="signin-btn">Sign In</a>
+    </nav>
+  </header>
 
-<!-- BACK BUTTON -->
-<div class="gsys-back-wrap">
-  <a href="javascript:history.back()" class="gsys-back-btn">← Back</a>
-</div>
-
-<!-- CONTACT SECTION -->
-<section class="gctc-contact-section">
-  <div class="gctc-contact-box">
-
-    <h1 class="gctc-title">Contact Us</h1>
-    <p class="gctc-subtitle">Berikan masukan, saran, atau kritik untuk pengembangan website kami 🌿</p>
-
-    <form class="gctc-form">
-
-      <div class="gctc-form-group">
-        <label>Nama</label>
-        <input type="text" placeholder="Masukkan nama Anda" required>
-      </div>
-
-      <div class="gctc-form-group">
-        <label>Email</label>
-        <input type="email" placeholder="Masukkan email Anda" required>
-      </div>
-
-      <div class="gctc-form-group">
-        <label>Pesan / Feedback</label>
-        <textarea rows="5" placeholder="Tulis feedback Anda..." required></textarea>
-      </div>
-
-      <button type="submit" class="gctc-submit-btn">Kirim Feedback</button>
-
-    </form>
-
+  <!-- BACK BUTTON -->
+  <div class="gsys-back-wrap">
+    <a href="javascript:history.back()" class="gsys-back-btn">← Back</a>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
-</footer>
+  <!-- CONTACT HERO -->
+  <section class="gctc-hero">
+    <div class="gctc-hero-inner">
+      <p class="gctc-hero-tag">Contact Us</p>
+      <h1 class="gctc-hero-title">Kami Senang Mendengar Masukan Anda</h1>
+      <p class="gctc-hero-text">
+        Sampaikan kritik, saran, dan pengalaman Anda saat menggunakan Green Mangrove Nusantara Library.
+        Setiap feedback membantu kami berkembang menjadi layanan yang lebih baik.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="gctc-contact-section">
+    <div class="gctc-contact-shell">
+
+      <div class="gctc-info-card">
+        <span class="gctc-info-badge">Website Feedback</span>
+        <h2 class="gctc-info-title">Berikan Feedback Anda</h2>
+        <p class="gctc-info-text">
+          Kami terbuka untuk saran mengenai tampilan website, isi koleksi, fitur layanan,
+          maupun pengalaman penggunaan di laptop dan handphone.
+        </p>
+
+        <div class="gctc-info-points">
+          <div class="gctc-info-point">
+            <h3>Tampilan Lebih Baik</h3>
+            <p>Bantu kami mengetahui bagian mana yang perlu diperbaiki agar lebih nyaman digunakan.</p>
+          </div>
+          <div class="gctc-info-point">
+            <h3>Layanan Lebih Lengkap</h3>
+            <p>Masukan Anda dapat menjadi inspirasi untuk pengembangan fitur baru ke depannya.</p>
+          </div>
+          <div class="gctc-info-point">
+            <h3>Akses Lebih Mudah</h3>
+            <p>Kami ingin website ini tetap rapi, responsif, dan mudah diakses di semua device.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gctc-form-card">
+        <form class="gctc-form">
+          <div class="gctc-form-group">
+            <label for="gctc-name">Nama</label>
+            <input id="gctc-name" type="text" placeholder="Masukkan nama Anda" required>
+          </div>
+
+          <div class="gctc-form-group">
+            <label for="gctc-email">Email</label>
+            <input id="gctc-email" type="email" placeholder="Masukkan email Anda" required>
+          </div>
+
+          <div class="gctc-form-group">
+            <label for="gctc-subject">Topik</label>
+            <input id="gctc-subject" type="text" placeholder="Contoh: Saran tampilan website">
+          </div>
+
+          <div class="gctc-form-group">
+            <label for="gctc-message">Pesan / Feedback</label>
+            <textarea id="gctc-message" rows="6" placeholder="Tulis feedback Anda di sini..." required></textarea>
+          </div>
+
+          <button type="submit" class="gctc-submit-btn">Kirim Feedback</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Green Mangrove Nusantara Library | Designed by Salwa</p>
+  </footer>
 
 </body>
 </html>
