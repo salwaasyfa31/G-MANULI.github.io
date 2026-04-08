@@ -1708,13 +1708,13 @@ footer {
   background: #eef8f1;
   transform: translateY(-2px);
 }
-/* ============================
-   GMQUIZ MANGROVE QUIZ
-   ============================ */
+/* =============================
+   GMQUIZ MODERN UI
+   ============================= */
 
 .gmquiz-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #eef8f1, #e6f5ff);
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #e6f5ff, #eef8f1);
   text-align: center;
 }
 
@@ -1724,70 +1724,105 @@ footer {
 }
 
 .gmquiz-title {
+  font-size: 28px;
   color: #1f4d3a;
-}
-
-.gmquiz-subtitle {
-  color: #555;
   margin-bottom: 20px;
 }
 
+/* progress bar */
+.gmquiz-progress {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#gmquiz-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #1f4d3a, #7fbf7f);
+  transition: 0.3s;
+}
+
+/* box */
 .gmquiz-box {
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
 .gmquiz-question {
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 20px;
   color: #1f4d3a;
+  margin-bottom: 20px;
 }
 
+/* options */
 .gmquiz-options button {
-  display: block;
   width: 100%;
+  padding: 12px;
   margin: 8px 0;
-  padding: 10px;
-  border-radius: 10px;
   border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
   background: #7fbf7f;
   color: white;
-  cursor: pointer;
   transition: 0.3s;
 }
 
 .gmquiz-options button:hover {
-  background: #1f4d3a;
+  transform: scale(1.03);
 }
 
-.gmquiz-next-btn {
+/* benar salah */
+.gmquiz-correct {
+  background: #1f4d3a !important;
+}
+
+.gmquiz-wrong {
+  background: #8b5e3c !important;
+}
+
+/* next button */
+.gmquiz-next {
   margin-top: 15px;
-  padding: 10px 20px;
-  background: #8b5e3c;
-  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
   border: none;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #1f4d3a, #7fbf7f);
+  color: white;
   cursor: pointer;
 }
 
+/* result */
 .gmquiz-result {
+  display: none;
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
   margin-top: 20px;
 }
 
 .gmquiz-restart {
+  margin-top: 10px;
   padding: 10px 20px;
-  background: #1f4d3a;
+  border-radius: 20px;
+  background: #8b5e3c;
   color: white;
   border: none;
-  border-radius: 20px;
-  cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* responsive */
 @media (max-width: 768px) {
   .gmquiz-box {
     padding: 20px;
+  }
+
+  .gmquiz-question {
+    font-size: 18px;
   }
 }
