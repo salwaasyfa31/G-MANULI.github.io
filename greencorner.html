@@ -14,30 +14,33 @@
   ...
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-  <script>
+<script>
 const gmquizData = [
   {
     question: "Apa fungsi utama mangrove?",
-    options: ["Menahan abrasi", "Tempat parkir", "Lapangan sepak bola"],
+    options: ["Menahan abrasi", "Tempat parkir", "Lapangan bola"],
     answer: 0
   },
   {
-    question: "Mangrove hidup di daerah?",
-    options: ["Pegunungan", "Pesisir pantai", "Padang rumput"],
+    question: "Mangrove hidup di?",
+    options: ["Gunung", "Pantai", "Padang rumput"],
     answer: 1
   },
   {
-    question: "Akar mangrove berfungsi untuk?",
-    options: ["Menyerap air laut dan menopang", "Hiasan saja", "Tempat duduk"],
+    question: "Akar mangrove berfungsi?",
+    options: ["Menopang dan menyerap", "Hiasan", "Mainan"],
     answer: 0
   }
 ];
 
 let gmquizIndex = 0;
 let gmquizScore = 0;
+let gmquizAnswered = false;
 
 function gmquizLoad() {
+  gmquizAnswered = false;
   const q = gmquizData[gmquizIndex];
+
   document.getElementById("gmquiz-question").innerText = q.question;
 
   const options = document.getElementById("gmquiz-options");
@@ -46,19 +49,33 @@ function gmquizLoad() {
   q.options.forEach((opt, i) => {
     const btn = document.createElement("button");
     btn.innerText = opt;
-    btn.onclick = () => gmquizCheck(i);
+
+    btn.onclick = () => {
+      if (gmquizAnswered) return;
+      gmquizAnswered = true;
+
+      if (i === q.answer) {
+        btn.classList.add("gmquiz-correct");
+        gmquizScore++;
+      } else {
+        btn.classList.add("gmquiz-wrong");
+      }
+    };
+
     options.appendChild(btn);
   });
+
+  updateProgress();
 }
 
-function gmquizCheck(i) {
-  if (i === gmquizData[gmquizIndex].answer) {
-    gmquizScore++;
-  }
+function updateProgress() {
+  const percent = ((gmquizIndex) / gmquizData.length) * 100;
+  document.getElementById("gmquiz-progress-bar").style.width = percent + "%";
 }
 
 document.getElementById("gmquiz-next").onclick = () => {
   gmquizIndex++;
+
   if (gmquizIndex < gmquizData.length) {
     gmquizLoad();
   } else {
